@@ -2,12 +2,23 @@
   "name": "gemini-cli-launcher",
   "displayName": "Gemini CLI Launcher",
   "description": "Gemini CLI를 편하게 사용할 수 있습니다.",
+  "icon": "gemini.png",
+  "publisher": "acebunny00",
+  "homepage": "https://github.com/acebunny00",
+  "bugs": {
+    "url": "https://github.com/acebunny00/gemini-cli-launcher/issues",
+    "email": "acebunny00@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acebunny00/gemini-cli-launcher"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
-    "Other"
+    "AI"
   ],
   "activationEvents": [
     "onStartupFinished"

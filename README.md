@@ -1,71 +1,33 @@
-# gemini-cli-launcher README
+# Gemini CLI Launcher
 
-This is the README for your extension "gemini-cli-launcher". After writing up a brief description, we recommend including the following sections.
+이 확장 프로그램은 Visual Studio Code에서 Gemini CLI를 편리하게 실행할 수 있도록 도와줍니다.
 
-## Features
+## 동기
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+[gemini-cli](https://github.com/google-gemini/gemini-cli/issues/7289)
 
-For example if there is an image subfolder under your extension project workspace:
+## 기능
 
-\!\[feature X\]\(images/feature-x.png\)
+* **Gemini CLI 실행**: VS Code 내에서 터미널을 열고 미리 설정된 명령어로 Gemini CLI를 즉시 실행합니다.
+* **상태 표시줄 아이템**: VS Code 상태 표시줄에 `Gemini CLI` 아이템을 추가하여 한 번의 클릭으로 Gemini CLI를 실행할 수 있습니다.
+* **옵션**: `gemini --model gemini-2.5-flash --yolo --all-files --checkpointing`
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 사용 방법
 
-## Requirements
+1. Visual Studio Code를 엽니다.
+2. 상태 표시줄의 `Gemini CLI` 아이템을 클릭하거나, 명령 팔레트(Ctrl+Shift+P)를 열고 `Gemini CLI`를 검색하여 실행합니다.
+3. 새로운 터미널이 열리고 Gemini CLI가 자동으로 실행됩니다.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 요구 사항
 
-## Extension Settings
+* 시스템에 Gemini CLI가 설치되어 있어야 합니다.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## 알려진 문제
 
-For example:
+현재 알려진 문제는 없습니다.
 
-This extension contributes the following settings:
+## 릴리스 노트
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### 0.0.1
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* 초기 릴리스: Gemini CLI 실행 기능 및 상태 표시줄 아이템 추가.
