@@ -1,6 +1,7 @@
 out
 dist
 node_modules
+bun.lock
 .vscode/
 .vscode-test/
 *.vsix

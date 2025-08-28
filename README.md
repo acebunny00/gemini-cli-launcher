@@ -10,7 +10,8 @@
 
 * **Gemini CLI 실행**: VS Code 내에서 터미널을 열고 미리 설정된 명령어로 Gemini CLI를 즉시 실행합니다.
 * **상태 표시줄 아이템**: VS Code 상태 표시줄에 `Gemini CLI` 아이템을 추가하여 한 번의 클릭으로 Gemini CLI를 실행할 수 있습니다.
-* **옵션**: `gemini --model gemini-2.5-flash --yolo --all-files --checkpointing`
+* **옵션**: `gemini --model gemini-2.5-flash --yolo
+* **옵션 설명**: flash 모델 사용 / 자동 승인
 
 ## 사용 방법
 
