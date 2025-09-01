@@ -25,7 +25,13 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "login": "vsce login acebunny00",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "publish:major": "vsce publish major",
+    "publish:minor": "vsce publish minor",
+    "publish:patch": "vsce publish patch"
   },
   "devDependencies": {
     "@types/vscode": "^1.103.0",
