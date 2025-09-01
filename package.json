@@ -171,6 +171,16 @@
   "extensionPack": [],
   "pricing": "Free",
   "publisher": "acebunny00",
+  "icon": "gemini.png",
+  "homepage": "https://github.com/acebunny00",
+  "bugs": {
+    "url": "https://github.com/acebunny00/gemini-cli-launcher/issues",
+    "email": "acebunny00@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acebunny00/gemini-cli-launcher"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
