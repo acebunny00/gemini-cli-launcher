@@ -1,3 +1,5 @@
+bun.lock
+.vscode
 out
 dist
 node_modules
