@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 	const openGeminiDisposable = vscode.commands.registerCommand("gemini.cli", () => {
-		vscode.window.createTerminal({ name: "Gemini CLI", shellPath: "powershell.exe", shellArgs: ["-NoExit", "-Command", "& gemini --model gemini-2.5-flash --yolo"] }).show();
+		vscode.window.createTerminal({ name: "Gemini CLI", shellPath: "powershell.exe", shellArgs: ["-NoExit", "-Command", "& gemini --model gemini-2.5-flash --yolo --all-files --checkpointing"] }).show();
 	});
 
 	const geminiStatusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);

@@ -8,10 +8,13 @@
 
 ## 기능
 
-- **명령**: 상태표시줄의 `Gemini CLI` 버튼으로 `gemini -m gemini-2.5-flash --yolo` 실행
+- **명령**: 상태표시줄의 `Gemini CLI` 버튼으로 실행
+- **옵션**: `-m gemini-2.5-flash --yolo --all-files --checkpointing`
 - **옵션 설명**:
   - (pro 모델 대신) flash 모델 사용
   - (수동 승인 대신) 자동 승인
+  - 프로젝트 내 모든 폴더의 파일 사용
+  - 프로젝트별 저장
 
 ## 요구 사항
 
