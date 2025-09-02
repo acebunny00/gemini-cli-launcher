@@ -8,7 +8,11 @@
 
 ## 기능
 
-- **명령**: 상태표시줄의 `Gemini CLI` 버튼으로 실행
+- **명령**:
+  - 상태표시줄의 `Gemini CLI` 버튼으로 실행
+  - 탐색기의 컨텍스트 메뉴로 실행
+    - PowerShell
+    - Git Bash
 - **옵션**: `-m gemini-2.5-flash --yolo --all-files --checkpointing`
 - **옵션 설명**:
   - (pro 모델 대신) flash 모델 사용
