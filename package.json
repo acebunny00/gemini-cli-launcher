@@ -2,7 +2,7 @@
   "name": "gemini-cli-launcher",
   "displayName": "Gemini CLI Launcher",
   "description": "Gemini CLI를 편하게 사용할 수 있습니다.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.103.0"
   },
@@ -188,28 +188,94 @@
   "contributes": {
     "commands": [
       {
-        "command": "gemini.cli.inPowerShell",
-        "title": "Gemini PowerShell로 열기"
+        "command": "gemini.cli.onGitBash",
+        "title": "Gemini CLI: Bash로 열기 - 리눅스 스타일"
       },
       {
-        "command": "gemini.cli.inGitBash",
-        "title": "Gemini GitBash로 열기"
+        "command": "gemini.cli.onBash",
+        "title": "Gemini CLI: Bash로 열기"
+      },
+      {
+        "command": "gemini.cli.onCMD",
+        "title": "Gemini CLI: CMD로 열기"
+      },
+      {
+        "command": "gemini.cli.onPowerShell",
+        "title": "Gemini CLI: PowerShell로 열기"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "gemini.cli.inPowerShell",
-          "group": "navigation"
+          "command": "gemini.cli.onGitBash",
+          "group": "navigation",
+          "when": "config.gemini.cli.contextMenu.onGitBash"
         },
         {
-          "command": "gemini.cli.inGitBash",
-          "group": "navigation"
+          "command": "gemini.cli.onBash",
+          "group": "navigation",
+          "when": "config.gemini.cli.contextMenu.onBash"
+        },
+        {
+          "command": "gemini.cli.onCMD",
+          "group": "navigation",
+          "when": "config.gemini.cli.contextMenu.onCMD"
+        },
+        {
+          "command": "gemini.cli.onPowerShell",
+          "group": "navigation",
+          "when": "config.gemini.cli.contextMenu.onPowerShell"
         }
       ]
+    },
+    "configuration": {
+      "title": "Gemini CLI Launcher 설정",
+      "properties": {
+        "gemini.cli.command.useFlash": {
+          "type": "boolean",
+          "default": true,
+          "description": "Pro or Flash (모델별 사용 제한량 존재)"
+        },
+        "gemini.cli.command.yolo": {
+          "type": "boolean",
+          "default": true,
+          "description": "도구 자동 승인"
+        },
+        "gemini.cli.command.allFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "모든 파일 접근 자동 승인"
+        },
+        "gemini.cli.command.checkpointing": {
+          "type": "boolean",
+          "default": true,
+          "description": "프로젝트별 과거 요청사항 복구(Arrow up key)"
+        },
+        "gemini.cli.contextMenu.onGitBash": {
+          "type": "boolean",
+          "default": false,
+          "description": "탐색기 컨텍스트 메뉴에 'Gemini CLI: Bash로 열기 - 리눅스 스타일'을 표시합니다."
+        },
+        "gemini.cli.contextMenu.onBash": {
+          "type": "boolean",
+          "default": false,
+          "description": "탐색기 컨텍스트 메뉴에 'Gemini CLI: Bash로 열기'를 표시합니다."
+        },
+        "gemini.cli.contextMenu.onCMD": {
+          "type": "boolean",
+          "default": false,
+          "description": "탐색기 컨텍스트 메뉴에 'Gemini CLI: CMD로 열기'를 표시합니다."
+        },
+        "gemini.cli.contextMenu.onPowerShell": {
+          "type": "boolean",
+          "default": true,
+          "description": "탐색기 컨텍스트 메뉴에 'Gemini CLI: PowerShell로 열기'를 표시합니다."
+        }
+      }
     }
   },
   "scripts": {
+    "publish:local": "npm run package && code --profile ts --uninstall-extension acebunny00.gemini-cli-launcher || echo '확장 프로그램이 설치되어 있지 않아 삭제할 수 없습니다.' && code --profile ts --install-extension gemini-cli-launcher-*.vsix",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
